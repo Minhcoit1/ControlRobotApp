@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/superProgressBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".MainActivity"
+    tools:visibility="visible">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="173dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="173dp"
+        android:text="EAE Robot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_FRight"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="73dp"
+        android:text="FRIGHT"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myWebView" />
+
+    <Button
+        android:id="@+id/btn_FLeft"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="35dp"
+        android:text="FLEFT"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myWebView" />
+
+    <Button
+        android:id="@+id/btn_Left"
+        android:layout_width="85dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="5dp"
+        android:text="LEFT"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_BLeft"
+        app:layout_constraintEnd_toStartOf="@+id/seekBar_speed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_FLeft" />
+
+    <Button
+        android:id="@+id/btn_BRight"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="93dp"
+        android:text="BRIGHT"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_forward"
+        android:layout_width="86dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="11dp"
+        android:text="Forward"
+        android:textSize="8sp"
+        app:icon="@color/purple_200"
+        app:layout_constraintEnd_toStartOf="@+id/btn_FRight"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_FLeft"
+        app:layout_constraintTop_toBottomOf="@+id/myWebView" />
+
+    <Button
+        android:id="@+id/btn_Right"
+        android:layout_width="86dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="36dp"
+        android:text="RIGHT"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_BRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/seekBar_speed"
+        app:layout_constraintTop_toBottomOf="@+id/btn_FRight" />
+
+    <SeekBar
+        android:id="@+id/seekBar_speed"
+        android:layout_width="145dp"
+        android:layout_height="9dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="10dp"
+        android:max="9"
+        android:progress="50"
+        app:layout_constraintBottom_toTopOf="@+id/btn_BRight"
+        app:layout_constraintEnd_toStartOf="@+id/btn_Right"
+        app:layout_constraintStart_toEndOf="@+id/btn_Left"
+        app:layout_constraintTop_toBottomOf="@+id/btn_FRight" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="86dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="67dp"
+        android:text="BACK"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_BRight"
+        app:layout_constraintStart_toEndOf="@+id/btn_BLeft"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_speed" />
+
+    <Button
+        android:id="@+id/btn_BLeft"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="87dp"
+        android:layout_marginBottom="93dp"
+        android:text="BLEFT"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Left" />
+
+    <WebView
+        android:id="@+id/myWebView"
+        android:layout_width="400dp"
+        android:layout_height="225dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="20dp"
+        android:background="#E33838"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btn_forward"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/myProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="396dp"
+        android:layout_height="7dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/myWebView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/myrImageView"
+        android:layout_width="95dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="66dp"
+        app:layout_constraintBottom_toTopOf="@+id/myProgressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.756"
+        app:layout_constraintStart_toEndOf="@+id/webView_sensor"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@drawable/logobosch" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="135dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logobosch" />
+
+    <WebView
+        android:id="@+id/webView_sensor"
+        android:layout_width="223dp"
+        android:layout_height="227dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/myProgressBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.791" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
